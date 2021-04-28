@@ -30,11 +30,12 @@ Go to browser: http://127.0.0.1
 heroku push
 heroku stack:set container
 
-tell heroku to use docker
+tell heroku to use docker:
 <pre>
 heroku stack:set container --app=kudi-ya-popav
 </pre>
 
+straight push docker container
 <pre>
 heroku create "name-for-your-app"
 heroku container:push web --app "name-for-your-app"
