@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+</head>
+<body>
+    {% if request.remote_addr == '127.0.0.1' %}
+        <h1>Опана, я на локалхості</h1>
+    {% elif request.host == "demo-kudi-ya-popav.herokuapp.com" %}
+        <h1>Опана, я на Heroku</h1>
+    {% else %}
+        <h1>Опана, я в докері на локалхості</h1>
+    {% endif %}
+</body>
+</html>
