@@ -27,8 +27,14 @@ docker run -it -p 80:8000 kudi-ya-popav
 
 Go to browser: http://127.0.0.1
 
+heroku push
+heroku stack:set container
 
-heroku push directly
+tell heroku to use docker
+<pre>
+heroku stack:set container --app=kudi-ya-popav
+</pre>
+
 <pre>
 heroku create "name-for-your-app"
 heroku container:push web --app "name-for-your-app"
