@@ -35,9 +35,18 @@ tell heroku to use docker:
 heroku stack:set container --app=kudi-ya-popav
 </pre>
 
+set git remote
+<pre>
+heroku git:remote -a "project-name"
+</pre>
+
 straight push docker container
 <pre>
 heroku create "name-for-your-app"
 heroku container:push web --app "name-for-your-app"
 heroku container:release web --app "name-for-your-app"
 </pre>
+
+in case of:
+- Error: docker push exited with Error: 1
+<pre>heroku container:login</pre>
